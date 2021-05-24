@@ -8,21 +8,7 @@ from opfunu.cec.cec2014.utils import *
 SUPPORT_DIMENSION = [2, 10, 20, 30, 50, 100]
 SUPPORT_DIMENSION_2 = [10, 20, 30, 50, 100]
 
-'''def F1(solution=None, name="Rotated High Conditioned Elliptic Function", shift_data_file="shift_data_1.txt", bias=100):
-    problem_size = len(solution)
-    if problem_size > 100:
-        print("CEC 2014 not support for problem size > 100")
-        return 1
-    if problem_size in SUPPORT_DIMENSION:
-        f_matrix = "M_1_D" + str(problem_size) + ".txt"
-    else:
-        print("CEC 2014 function only support problem size 2, 10, 20, 30, 50, 100")
-        return 1
-    shift_data = load_shift_data__(shift_data_file)[:problem_size]
-    matrix = load_matrix_data__(f_matrix)
-    z = dot(solution - shift_data, matrix)
-    return f1_elliptic__(z) + bias
- '''
+
 
 # define the function blocks
 def prod(it):
@@ -51,6 +37,7 @@ def F1(solution=None, name="Rotated High Conditioned Elliptic Function", shift_d
     matrix = load_matrix_data__(f_matrix)
     z = dot(solution - shift_data, matrix)
     return f1_elliptic__(z) + bias
+
 
 def F2(solution=None, name="Rotated Bent Cigar Function", shift_data_file="shift_data_2.txt", bias=200):
     problem_size = len(solution)
@@ -808,6 +795,7 @@ def F30(solution=None, name="Composition Function 8", shift_data_file="shift_dat
     for i in range(0, num_funcs):
         result += (weights[i] / sw) * fits[i]
     return result + f_bias
+
 '''def F2(x):
     o = sum(abs(x)) + prod(abs(x))
     return o
@@ -1140,7 +1128,7 @@ def getFunctionDetails(a):
         "F21": ["F21", 0, 10, 4],
         "F22": ["F22", 0, 10, 4],
         "F23": ["F23", 0, 10, 4],
-        "F24": ["F24", 0, 1, 6],
+        "F24": ["F24", 0, 10, 4],
         "F25": ["F25", 0, 10, 4],
         "F26": ["F26", 0, 10, 4],
         "F27": ["F27", 0, 10, 4],
