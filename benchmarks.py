@@ -488,7 +488,7 @@ def F22(solution=None, name="Hybrid Function 6", shift_data_file="shift_data_22.
 
 ### ================== Composition function ========================
 
-def F23(solution=None, name="Composition Function 1", f_shift_file="shift_data_23_D10.txt", f_matrix="M_23_D10", f_bias=2300):
+def F23(solution=None, name="Composition Function 1", f_shift_file="shift_data_23.txt", f_matrix="M_23_D", f_bias=2300):
     problem_size = len(solution)
     xichma = array([10, 20, 30, 40, 50])
     lamda = array([1, 1e-6, 1e-26, 1e-6, 1e-6])
@@ -533,7 +533,7 @@ def F23(solution=None, name="Composition Function 1", f_shift_file="shift_data_2
     return result + f_bias
 
 
-def F24(solution=None, name="Composition Function 2", f_shift_file="shift_data_24.txt", f_matrix="M_24_D", f_bias=2400):
+def F24(solution=None, name="Composition Function 2", f_shift_file="shift_data_24_D10.txt", f_matrix="M_24_D10", f_bias=2400):
     problem_size = len(solution)
     xichma = array([20, 20, 20])
     lamda = array([1, 1, 1])
