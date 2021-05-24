@@ -533,7 +533,7 @@ def F23(solution=None, name="Composition Function 1", f_shift_file="shift_data_2
     return result + f_bias
 
 
-def F24(solution=None, name="Composition Function 2", f_shift_file="shift_data_24_D10.txt", f_matrix="M_24_D10", f_bias=2400):
+def F24(solution=None, name="Composition Function 2", f_shift_file="shift_data_24.txt", f_matrix="M_24_D", f_bias=2400):
     problem_size = len(solution)
     xichma = array([20, 20, 20])
     lamda = array([1, 1, 1])
