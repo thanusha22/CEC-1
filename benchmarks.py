@@ -1,14 +1,14 @@
 
 import numpy
 import math
-'''
+
 from numpy import dot, ones, array, ceil
 from opfunu.cec.cec2014.utils import *
 
 SUPPORT_DIMENSION = [2, 10, 20, 30, 50, 100]
 SUPPORT_DIMENSION_2 = [10, 20, 30, 50, 100]
 
-def F1(solution=None, name="Rotated High Conditioned Elliptic Function", shift_data_file="shift_data_1.txt", bias=100):
+'''def F1(solution=None, name="Rotated High Conditioned Elliptic Function", shift_data_file="shift_data_1.txt", bias=100):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2014 not support for problem size > 100")
@@ -37,9 +37,20 @@ def Ufun(x, a, k, m):
     return y
 
 
-def F1(x):
-    s = numpy.sum(x ** 2)
-    return s
+def F1(solution=None, name="Rotated High Conditioned Elliptic Function", shift_data_file="shift_data_1.txt", bias=100):
+    problem_size = len(solution)
+    if problem_size > 100:
+        print("CEC 2014 not support for problem size > 100")
+        return 1
+    if problem_size in SUPPORT_DIMENSION:
+        f_matrix = "M_1_D" + str(problem_size) + ".txt"
+    else:
+        print("CEC 2014 function only support problem size 2, 10, 20, 30, 50, 100")
+        return 1
+    shift_data = load_shift_data__(shift_data_file)[:problem_size]
+    matrix = load_matrix_data__(f_matrix)
+    z = dot(solution - shift_data, matrix)
+    return f1_elliptic__(z) + bias
 
 
 def F2(x):
