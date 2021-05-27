@@ -1,6 +1,6 @@
 
 ## Features
-- Hybrid nature-inspired metaheuristic optimizer alond with other algorithms were implemented.
+- Hybrid nature-inspired metaheuristic optimizer alonG with other algorithms were implemented.
 - The implimentation uses the fast array manipulation using `NumPy`.
 - Matrix support using `SciPy`'s package.
 - More optimizers is comming soon.
