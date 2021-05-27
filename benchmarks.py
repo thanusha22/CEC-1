@@ -9,7 +9,7 @@ SUPPORT_DIMENSION_2 = [10, 20, 30, 50, 100]
 
 
 
-def F5(solution=None, name="Shifted and Rotated Ackley’s Function", shift_data_file="shift_data_5.txt", bias=500):
+def C5(solution=None, name="Shifted and Rotated Ackley’s Function", shift_data_file="shift_data_5.txt", bias=500):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2015 not support for problem size > 100")
@@ -24,7 +24,7 @@ def F5(solution=None, name="Shifted and Rotated Ackley’s Function", shift_data
     z = dot(solution - shift_data, matrix)
     return f5_ackley__(z) + bias
 
-def F6(solution=None, name="Shifted Rastrigin’s Function", shift_data_file="shift_data_8.txt", bias=800):
+def C6(solution=None, name="Shifted Rastrigin’s Function", shift_data_file="shift_data_8.txt", bias=800):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2014 not support for problem size > 100")
@@ -40,7 +40,7 @@ def F6(solution=None, name="Shifted Rastrigin’s Function", shift_data_file="sh
     z = dot(z, matrix)
     return f8_rastrigin__(z) + bias
 
-def F7(solution=None, name="Shifted and Rotated Griewank’s Function", shift_data_file="shift_data_7.txt", bias=700):
+def C7(solution=None, name="Shifted and Rotated Griewank’s Function", shift_data_file="shift_data_7.txt", bias=700):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2014 not support for problem size > 100")
@@ -57,7 +57,7 @@ def F7(solution=None, name="Shifted and Rotated Griewank’s Function", shift_da
     return f7_griewank__(z) + bias
 
 
-def F10(solution=None, name="Shifted Schwefel’s Function", shift_data_file="shift_data_10.txt", bias=1000):
+def C10(solution=None, name="Shifted Schwefel’s Function", shift_data_file="shift_data_10.txt", bias=1000):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2014 not support for problem size > 100")
@@ -73,7 +73,7 @@ def F10(solution=None, name="Shifted Schwefel’s Function", shift_data_file="sh
     z = dot(z, matrix)
     return f9_modified_schwefel__(z) + bias
 
-def F11(solution=None, name="Shifted and Rotated Schwefel’s Function", shift_data_file="shift_data_11.txt", bias=1100):
+def C11(solution=None, name="Shifted and Rotated Schwefel’s Function", shift_data_file="shift_data_11.txt", bias=1100):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2014 not support for problem size > 100")
@@ -89,7 +89,7 @@ def F11(solution=None, name="Shifted and Rotated Schwefel’s Function", shift_d
     z = dot(z, matrix)
     return f9_modified_schwefel__(z) + bias
 
-def F12(solution=None, name="Shifted and Rotated Katsuura Function", shift_data_file="shift_data_12.txt", bias=1200):
+def C12(solution=None, name="Shifted and Rotated Katsuura Function", shift_data_file="shift_data_12.txt", bias=1200):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2014 not support for problem size > 100")
@@ -105,7 +105,7 @@ def F12(solution=None, name="Shifted and Rotated Katsuura Function", shift_data_
     z = dot(z, matrix)
     return f10_katsuura__(z) + bias
 
-def F13(solution=None, name="Shifted and Rotated Expanded Griewank’s plus Rosenbrock’s Function", shift_data_file="shift_data_15.txt", bias=1500):
+def C13(solution=None, name="Shifted and Rotated Expanded Griewank’s plus Rosenbrock’s Function", shift_data_file="shift_data_15.txt", bias=1500):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2014 not support for problem size > 100")
@@ -121,7 +121,7 @@ def F13(solution=None, name="Shifted and Rotated Expanded Griewank’s plus Rose
     z = dot(z, matrix) + 1
     return f13_expanded_griewank__(z) + bias
 
-def F14(solution=None, name="Shifted and Rotated Expanded Scaffer’s F6 Function", shift_data_file="shift_data_16.txt", bias=1600):
+def C14(solution=None, name="Shifted and Rotated Expanded Scaffer’s F6 Function", shift_data_file="shift_data_16.txt", bias=1600):
     problem_size = len(solution)
     if problem_size > 100:
         print("CEC 2014 not support for problem size > 100")
@@ -142,23 +142,23 @@ def F14(solution=None, name="Shifted and Rotated Expanded Scaffer’s F6 Functio
 def getFunctionDetails(a):
     # [name, lb, ub, dim]
     param = {
-        "F1": ["F1", -100, 100, 30],
-        "F2": ["F2", -10, 10, 30],
-        "F3": ["F3", -100, 100, 30],
-        "F4": ["F4", -100, 100, 30],
-        "F5": ["F5", -30, 30, 30],
-        "F6": ["F6", -500, 500, 30],
-        "F7": ["F7", -1.28, 1.28, 30],
-        "F8": ["F8", -500, 500, 30],
-        "F9": ["F9", -5.12, 5.12, 30],
-        "F10": ["F10", -32, 32, 30],
-        "F11": ["F11", -600, 600, 30],
-        "F12": ["F12", -50, 50, 30],
-        "F13": ["F13", -5, 5, 4],
-        "F14": ["F14", -5, 5, 2],
-        "F15": ["F15", -32, 32, 30],
-        "F16": ["F16", -600, 600, 30],
-        "F17": ["F17", -50, 50, 30],
+        "C1": ["C1", -100, 100, 30],
+        "C2": ["C2", -10, 10, 30],
+        "C3": ["C3", -100, 100, 30],
+        "C4": ["C4", -100, 100, 30],
+        "C5": ["C5", -30, 30, 30],
+        "C6": ["C6", -500, 500, 30],
+        "C7": ["C7", -1.28, 1.28, 30],
+        "C8": ["C8", -500, 500, 30],
+        "C9": ["C9", -5.12, 5.12, 30],
+        "C10": ["C10", -32, 32, 30],
+        "C11": ["C11", -600, 600, 30],
+        "C12": ["C12", -50, 50, 30],
+        "C13": ["C13", -5, 5, 4],
+        "C14": ["C14", -5, 5, 2],
+        "C15": ["C15", -32, 32, 30],
+        "C16": ["C16", -600, 600, 30],
+        "C17": ["C17", -50, 50, 30],
         
         
     }
